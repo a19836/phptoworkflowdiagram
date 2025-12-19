@@ -22,6 +22,7 @@ if (!is_dir($tmp_folder)) {
 	die();
 }
 else if (!is_writable($tmp_folder)) {
+	echo $style;
 	echo '<div class="error">Tmp folder must be writable at "' . $tmp_folder . '".</div>';
 	die();
 }
@@ -34,6 +35,7 @@ else {
 			$fp = "$tmp_folder/$file";
 			
 			if (!is_writable($fp)) {
+				echo $style;
 				echo '<div class="error">Tmp file must be writable: "' . $fp . '".</div>';
 				die();
 			}
